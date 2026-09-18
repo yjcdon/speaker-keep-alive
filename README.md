@@ -27,11 +27,11 @@
 先退出正在运行的程序，在 PowerShell 中执行：
 
 ```powershell
-& '.\源码\build.ps1'
+& '.\build.ps1'
 ```
 
 生成文件位于项目根目录。仓库仅包含源码、编译所需资源及本 README，不包含编译产物。当前版本为 **1.2.1**，包括托盘菜单打开状态窗口的时机修复。
 
 ## 图标许可
 
-图标基于 [Bootstrap Icons speaker-fill](https://icons.getbootstrap.com/icons/speaker-fill/)，第三方许可见 [源码/assets/Bootstrap-Icons-LICENSE.txt](源码/assets/Bootstrap-Icons-LICENSE.txt)。该许可仅涵盖相应第三方图标。
+图标基于 [Bootstrap Icons speaker-fill](https://icons.getbootstrap.com/icons/speaker-fill/)，第三方许可见 [assets/Bootstrap-Icons-LICENSE.txt](assets/Bootstrap-Icons-LICENSE.txt)。该许可仅涵盖相应第三方图标。

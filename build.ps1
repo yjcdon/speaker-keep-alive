@@ -8,7 +8,7 @@ if (-not (Test-Path -LiteralPath $speakerCompiler)) { throw '.NET Framework C# c
 if (-not (Test-Path -LiteralPath (Join-Path $speakerSource 'assets\speaker.ico'))) {
     & (Join-Path $speakerSource 'make-icons.ps1')
 }
-$speakerOutput = Join-Path (Split-Path -Parent $speakerSource) 'SpeakerKeepAlive.exe'
+$speakerOutput = Join-Path $speakerSource 'SpeakerKeepAlive.exe'
 & $speakerCompiler /nologo /target:winexe /platform:anycpu /optimize+ /warn:4 /warnaserror+ /utf8output `
     '/reference:System.dll' '/reference:System.Core.dll' '/reference:System.Drawing.dll' `
     '/reference:System.Windows.Forms.dll' `
