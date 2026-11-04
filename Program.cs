@@ -9,8 +9,8 @@ using Microsoft.Win32;
 
 [assembly: AssemblyTitle("音箱静音保活")]
 [assembly: AssemblyDescription("Windows 原生托盘全零静音工具")]
-[assembly: AssemblyVersion("1.2.1.0")]
-[assembly: AssemblyFileVersion("1.2.1.0")]
+[assembly: AssemblyVersion("1.2.2.0")]
+[assembly: AssemblyFileVersion("1.2.2.0")]
 
 namespace SpeakerKeepAlive
 {
