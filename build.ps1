@@ -6,7 +6,7 @@ if (-not (Test-Path -LiteralPath $speakerCompiler)) {
 }
 if (-not (Test-Path -LiteralPath $speakerCompiler)) { throw '.NET Framework C# compiler not found.' }
 if (-not (Test-Path -LiteralPath (Join-Path $speakerSource 'assets\speaker.ico'))) {
-    & (Join-Path $speakerSource 'make-icons.ps1')
+    throw 'Missing assets\speaker.ico. Restore the committed active icon before building.'
 }
 $speakerOutput = Join-Path $speakerSource 'SpeakerKeepAlive.exe'
 & $speakerCompiler /nologo /target:winexe /platform:anycpu /optimize+ /warn:4 /warnaserror+ /utf8output `
@@ -15,6 +15,7 @@ $speakerOutput = Join-Path $speakerSource 'SpeakerKeepAlive.exe'
     "/win32manifest:$speakerSource\app.manifest" "/win32icon:$speakerSource\assets\speaker.ico" `
     "/resource:$speakerSource\assets\speaker.ico,speaker.ico" "/resource:$speakerSource\assets\speaker-paused.ico,speaker-paused.ico" `
     "/resource:$speakerSource\assets\Bootstrap-Icons-LICENSE.txt,Bootstrap-Icons-LICENSE.txt" `
+    "/resource:$speakerSource\assets\tabler-icons-LICENSE.txt,tabler-icons-LICENSE.txt" `
     "/out:$speakerOutput" "$speakerSource\NativeAudio.cs" "$speakerSource\AudioEngine.cs" "$speakerSource\TargetDevice.cs" "$speakerSource\Program.cs"
 if ($LASTEXITCODE -ne 0) { throw "Compilation failed: $LASTEXITCODE" }
 Get-Item -LiteralPath $speakerOutput | Select-Object FullName,Length

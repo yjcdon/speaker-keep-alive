@@ -47,5 +47,6 @@ function Write-SpeakerIcon([string]$Destination, [System.Drawing.Color]$Tile) {
         foreach ($speakerImage in $speakerImages) { $speakerWriter.Write([byte[]]$speakerImage.Bytes) }
     } finally { $speakerWriter.Dispose(); $speakerFile.Dispose() }
 }
-Write-SpeakerIcon (Join-Path $PSScriptRoot 'assets\speaker.ico') ([System.Drawing.Color]::FromArgb(0,103,192))
+# The active icon is committed as assets/speaker.ico, generated from speaker-silver.svg.
+# This script regenerates only the legacy paused-state icon.
 Write-SpeakerIcon (Join-Path $PSScriptRoot 'assets\speaker-paused.ico') ([System.Drawing.Color]::FromArgb(105,105,105))

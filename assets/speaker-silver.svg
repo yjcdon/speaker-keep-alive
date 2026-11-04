@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76">
+<!-- Symbol: Tabler Icons device-speaker, MIT license. See tabler-icons-LICENSE.txt. -->
+<defs><linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#e5e5ea"/></linearGradient></defs>
+<rect x="0.5" y="0.5" width="75" height="75" rx="17.5" fill="url(#silver)" stroke="#000" stroke-opacity="0.06"/>
+<g transform="translate(14 14) scale(2)" fill="none" stroke="#262629" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 5a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2l0 -14" />
+<path d="M9 14a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+<path d="M12 7l0 .01" />
+</g></svg>
